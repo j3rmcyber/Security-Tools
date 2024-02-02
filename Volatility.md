@@ -114,26 +114,33 @@ Consider setting an alias for the majority of this command to make your life eas
 **USE PROFILE!**  
 - -profile=xxxxxxxxxxx  
 - Other methods to get the suggested profile:  
+
 - "imageint02" Plugin: As mentioned earier, 
   you Can use the ' 'image-info? plugin, Which 
   the Older plugin in 
   Volatility Running this plugin not only 
   "Wide information about the memory 
   image but also the 4>propriate 
-  profiles for 
-  - KOBO Search: Volatility 
+  profiles for analysis.
+
+**volatility3 -f <filepath> imageinfo2**
+
+- KOBO Search: Volatility 
   for the Kernel Debugger alack 
   (KDBG) to determile the profile. You can 
   use the •kdbgscan• plugin to pertcrm tNs 
-  get suggested profies, 
-- output Will display potential 
+  get suggested profies.
+**volatility -f <filepath> ksbgscan**
+
+  - output Will display potential 
   based on the KDBG addresses. 
-- Volatility's Autodetect Feature: In some 
+  - Volatility's Autodetect Feature: In some 
   cases, if the memory irnage is in the correct 
   format and the headers are intact, Volatility's 
   autodetect feature Suggest the profile 
   without needirg to specify a plugin 
-  explicitly. 
+  explicitly.
+  
 - verinfo  
 - Hivelist  
 - Older versions may not need a profile!!  
