@@ -77,7 +77,7 @@ Timing Templates:
 - nmap --min-rate 50 192.168.0.1 (min packets per second)
 - nmap --max-rate 50 192.168.0.1 (max packets per second)
 - nmap --defeat-rst-ratelimit 192.168.0.1 (accelerate scans) less accurate 0.1 max can help with stealth
-- 
+  
 ## NMAP Scripting Engine (NSE)
 [Nmap Scripting Engine NSE](https://nmap.org/book/nse.html) 
 - nmap --script-help="all" (shows the scripts and categories) very long, use website below to search for what you need
