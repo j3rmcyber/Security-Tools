@@ -52,9 +52,9 @@ this is for getting the filtering status on a target
 ## OS and Service Detection
 - Nmap –O 192.168.0.1 (OS fingerprinting)
 - Nmap –v –O 192.168.0.1 (verbose)
--- --osscan-guess (shows confidence %)
+  - --osscan-guess (shows confidence %)
 - Nmap –sV 192.168.0.1 (service detection) vendor and software version #s
--- --version-trace (shows details of activity)
+  - --version-trace (shows details of activity)
 
 ## Time options
 Timing Templates:
