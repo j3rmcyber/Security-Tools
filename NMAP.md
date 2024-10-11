@@ -11,37 +11,29 @@
 - nmap -sn (only ping, no port. Online only)
 
 ## Foundational Scanning:
-nmap -PN 192.168.0.1 (do not ping)
-nmap -sP 192.168.0.0/24 (ping only also ARP scan returning MACs)
-nmap -PS *port#s* 192.168.0.1 (tcp syn ping: syn packet waits for response) Use if blocked ICMP
+- nmap -PN 192.168.0.1 (do not ping)
+- nmap -sP 192.168.0.0/24 (ping only also ARP scan returning MACs)
+- nmap -PS *port#s* 192.168.0.1 (tcp syn ping: syn packet waits for response) Use if blocked ICMP
 port# is optional
 
-nmap -PA 192.168.0.1 (tcp ack ping: discover hosts)
-nmap -PU *port#s* 192.168.0.1 (udp ping)
-port# optional
-
-nmap -PY *port#s* 192.168.0.1 (sctp init ping) IP telephony systems, port# optional
-
-nmap -PE 192.168.0.1 (icmp echo ping) Local networks, internet hosts do not respond
+- nmap -PA 192.168.0.1 (tcp ack ping: discover hosts)
+- nmap -PU *port#s* 192.168.0.1 (udp ping) port# optional
+- nmap -PY *port#s* 192.168.0.1 (sctp init ping) IP telephony systems, port# optional
+- nmap -PE 192.168.0.1 (icmp echo ping) Local networks, internet hosts do not respond
 PE is automatic if no other P method is chosen
-
-nmap -PP 192.168.0.1 (ICMP timestamp ping) improperly configured systems may respond
-nmap -PM 192.168.0.1 (icmp address mask ping) alternative registers.
+- nmap -PP 192.168.0.1 (ICMP timestamp ping) improperly configured systems may respond
+- nmap -PM 192.168.0.1 (icmp address mask ping) alternative registers.
 bypass firewalls blocking standard requests
-
-nmap -PO *protocols* 192.168.0.1 (ip protocol ping) diff protocols sent
+- nmap -PO *protocols* 192.168.0.1 (ip protocol ping) diff protocols sent
 protocols optional
-
-nmap -PR 192.168.0.1 (arp ping) faster, increased accuracy, noting blocks ARP. Subent only
-nmap --traceroute 192.168.0.1 (traceroute, shows path to target)
-nmap -R 192.168.0.1 (force reverse dns resolution) recon on block, resolve dns info for IPs
-nmap -n 192.168.0.1 (disable reverse dns resolution) speeds up for a lot of targets
+- nmap -PR 192.168.0.1 (arp ping) faster, increased accuracy, noting blocks ARP. Subent only
+- nmap --traceroute 192.168.0.1 (traceroute, shows path to target)
+- nmap -R 192.168.0.1 (force reverse dns resolution) recon on block, resolve dns info for IPs
+- nmap -n 192.168.0.1 (disable reverse dns resolution) speeds up for a lot of targets
 not required DNS names
-
-nmap --system-dns 192.168.0.1 (alternative dns lookup methods) slower,
+- nmap --system-dns 192.168.0.1 (alternative dns lookup methods) slower,
 good for troubleshooting dns problems
-
-nmap - -dns-servers 8.8.8.8,8.8.4.4 192.168.0.0/24 (manually specify DNS server) dns not config on system
+- nmap - -dns-servers 8.8.8.8,8.8.4.4 192.168.0.0/24 (manually specify DNS server) dns not config on system
 avoid logged scans in DNS servers
 
 ## Advanced Scanning
