@@ -32,7 +32,7 @@ protocols optional
 not required DNS names
 - nmap --system-dns 192.168.0.1 (alternative dns lookup methods) slower,
 good for troubleshooting dns problems
-- nmap - -dns-servers 8.8.8.8,8.8.4.4 192.168.0.0/24 (manually specify DNS server) dns not config on system
+- nmap --dns-servers 8.8.8.8,8.8.4.4 192.168.0.0/24 (manually specify DNS server) dns not config on system
 avoid logged scans in DNS servers
 
 ## Advanced Scanning
@@ -79,17 +79,17 @@ Timing Templates:
 - nmap --defeat-rst-ratelimit 192.168.0.1 (accelerate scans) less accurate 0.1 max can help with stealth
   
 ## NMAP Scripting Engine (NSE)
-[Nmap Scripting Engine NSE](https://nmap.org/book/nse.html) 
+- [Nmap Scripting Engine NSE](https://nmap.org/book/nse.html) 
 - nmap --script-help="all" (shows the scripts and categories) very long, use website below to search for what you need
 - nmap --script-help-"*http* (wildcard ability to search)
-[Scripts](https://nmap.org/nsedoc/scripts)
+- [Scripts](https://nmap.org/nsedoc/scripts)
 - nmap --script script.name 192.168.0.1
 
 - nmap -sn --script whois-* 192.168.0.1 (whois on the target)
 - nmap --traceroute --script traceroute-geolocation domain.com (trace and geolocation on target)
 
 ## Output Options
-[Output](https://nmap.org/book/man-output.html#:~:text=In%20addition%20to%20offering%20different%20output)
+- [Output](https://nmap.org/book/man-output.html#:~:text=In%20addition%20to%20offering%20different%20output)
 -oN text
 -oX XML
 -oG grepable
