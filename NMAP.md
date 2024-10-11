@@ -1,14 +1,14 @@
 # Nmap commands and brief descriptions
 ## Basics:
-nmap -F 192.168.0.1 (fast scan, top 100 ports)
-nmap -p *##* 192.168.0.1 (scan specific port)
-nmap -p 80,443,50-1000 (multiple ports separate by comma)
-nmap -p msrpc,http,ftp 192.168.0.1 (scans by port name)
-nmap -p “*” 192.168.0.1 (wildcard: invocation to explore all port landscape)
-nmap -sU -sT -p U:53,T:25 192.168.0.1 (UDP and TCP port scan)
-nmap --top-ports *10* 192.168.0.1 (scan top ports, here top 10 ports)
-nmap -v -r 192.168.0.1 (sequential port scan)
-nmap -sn (only ping, no port. Online only)
+- nmap -F 192.168.0.1 (fast scan, top 100 ports)
+- nmap -p *##* 192.168.0.1 (scan specific port)
+- nmap -p 80,443,50-1000 (multiple ports separate by comma)
+- nmap -p msrpc,http,ftp 192.168.0.1 (scans by port name)
+- nmap -p “*” 192.168.0.1 (wildcard: invocation to explore all port landscape)
+- nmap -sU -sT -p U:53,T:25 192.168.0.1 (UDP and TCP port scan)
+- nmap --top-ports *10* 192.168.0.1 (scan top ports, here top 10 ports)
+- nmap -v -r 192.168.0.1 (sequential port scan)
+- nmap -sn (only ping, no port. Online only)
 
 ## Foundational Scanning:
 nmap -PN 192.168.0.1 (do not ping)
