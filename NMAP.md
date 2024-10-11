@@ -15,7 +15,6 @@
 - nmap -sP 192.168.0.0/24 (ping only also ARP scan returning MACs)
 - nmap -PS *port#s* 192.168.0.1 (tcp syn ping: syn packet waits for response) Use if blocked ICMP
 port# is optional
-
 - nmap -PA 192.168.0.1 (tcp ack ping: discover hosts)
 - nmap -PU *port#s* 192.168.0.1 (udp ping) port# optional
 - nmap -PY *port#s* 192.168.0.1 (sctp init ping) IP telephony systems, port# optional
@@ -65,7 +64,6 @@ Timing Templates:
 - T4h (hours)
 - 0 -5 (zero being slowest 5 being fastest)
 - nmap -T5 192.168.0.1
-
 - nmap --min-parallelism 100 192.168.0.1 (100 operations are performed at a given time) enhancing performance
 - nmap --max-parallelism 5 192.168.0.1 (only 5 operations at a time) minimizes risk of packet flood
 - nmap --min-hostgroup 20 192.168.0.0/24 (20 hosts at once)
@@ -86,7 +84,7 @@ Timing Templates:
 - nmap --script-help-"*http* (wildcard ability to search)
 [Scripts](https://nmap.org/nsedoc/scripts)
 - nmap --script script.name 192.168.0.1
-- 
+
 - nmap -sn --script whois-* 192.168.0.1 (whois on the target)
 - nmap --traceroute --script traceroute-geolocation domain.com (trace and geolocation on target)
 
