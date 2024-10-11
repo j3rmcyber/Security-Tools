@@ -1,4 +1,4 @@
-# Nmap commands and brief descriptions
+# Nmap Commands and Brief Descriptions
 ## Basics:
 - nmap -F 192.168.0.1 (fast scan, top 100 ports)
 - nmap -p *##* 192.168.0.1 (scan specific port)
@@ -37,26 +37,25 @@ good for troubleshooting dns problems
 avoid logged scans in DNS servers
 
 ## Advanced Scanning
-nmap -sS 192.168.0.1 (tcp syn scan) does not log connection attempts: not guaranteed
-nmap -sT 192.168.0.1 (tcp connect scan) Establish direct connect, use sudo
-nmap -sU 192.198.0.1 (upd scan) layer of depth to scans
-nmap -sN 192.168.0.1 (tcp null scan) no tcp flags enabled response from behind a firewall
-nmap -sF 192.168.0.1 (tcp fin scan) sets fin active, illicit tcp ack
-nmap -sX 192.168.0.1 (xmas scan) urg fin psh flags set
-nmap -sA 192.168.0.1 (tcp ack scan) lookout for rst response. unfiltered is like a firewall
+- nmap -sS 192.168.0.1 (tcp syn scan) does not log connection attempts: not guaranteed
+- nmap -sT 192.168.0.1 (tcp connect scan) Establish direct connect, use sudo
+- nmap -sU 192.198.0.1 (upd scan) layer of depth to scans
+- nmap -sN 192.168.0.1 (tcp null scan) no tcp flags enabled response from behind a firewall
+- nmap -sF 192.168.0.1 (tcp fin scan) sets fin active, illicit tcp ack
+- nmap -sX 192.168.0.1 (xmas scan) urg fin psh flags set
+- nmap -sA 192.168.0.1 (tcp ack scan) lookout for rst response. unfiltered is like a firewall
 this is for getting the filtering status on a target
-
-nmap --scanflags *setflag* 192.168.0.1 (custom tcp scan)
-nmap -sO 192.168.0.1 (ip protocol scan) shows protocols used by the target
-nmap --send-eth 192.168.0.1 (send raw ethernet packets) sidesteps IP layer
-nmap --secnd-ip 192.168.0.1 (send ip packets) integrates with IP stack
+- nmap --scanflags *setflag* 192.168.0.1 (custom tcp scan)
+- nmap -sO 192.168.0.1 (ip protocol scan) shows protocols used by the target
+- nmap --send-eth 192.168.0.1 (send raw ethernet packets) sidesteps IP layer
+- nmap --secnd-ip 192.168.0.1 (send ip packets) integrates with IP stack
 
 ## OS and Service Detection
-Nmap –O 192.168.0.1 (OS fingerprinting)
-Nmap –v –O 192.168.0.1 (verbose)
-- --osscan-guess (shows confidence %)
-Nmap –sV 192.168.0.1 (service detection) vendor and software version #s
-- --version-trace (shows details of activity)
+- Nmap –O 192.168.0.1 (OS fingerprinting)
+- Nmap –v –O 192.168.0.1 (verbose)
+--osscan-guess (shows confidence %)
+- Nmap –sV 192.168.0.1 (service detection) vendor and software version #s
+--version-trace (shows details of activity)
 
 ## TIme options
 
