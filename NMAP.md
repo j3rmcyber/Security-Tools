@@ -53,12 +53,50 @@ this is for getting the filtering status on a target
 ## OS and Service Detection
 - Nmap –O 192.168.0.1 (OS fingerprinting)
 - Nmap –v –O 192.168.0.1 (verbose)
---osscan-guess (shows confidence %)
+-- --osscan-guess (shows confidence %)
 - Nmap –sV 192.168.0.1 (service detection) vendor and software version #s
---version-trace (shows details of activity)
+-- --version-trace (shows details of activity)
 
-## TIme options
+## Time options
+Timing Templates:
+- T4 (milliseconds)
+- T4s (seconds)
+- T4m (minutes
+- T4h (hours)
+- 0 -5 (zero being slowest 5 being fastest)
+- nmap -T5 192.168.0.1
 
+- nmap --min-parallelism 100 192.168.0.1 (100 operations are performed at a given time) enhancing performance
+- nmap --max-parallelism 5 192.168.0.1 (only 5 operations at a time) minimizes risk of packet flood
+- nmap --min-hostgroup 20 192.168.0.0/24 (20 hosts at once)
+- nmap --max-hostgroup 5 1952.168.0.0/24 (max targets scanning within the group) control network load
+- nmap --initial-rtt-timeout 1000ms 192.168.0.1 (reduce packet retransmission) speed up scans
+- nmap --max-rtt-timeout  100ms 192.168.0.1 (prevent from giving up on slow or unreliable connections)
+- nmap --max-retries 5 192.168.0.1 (probe retransmissions) override default and troubleshoot connectivity
+- nmap --ttl 2s 192.168.0.1 (set time to live) for slower connection, prevention expiration
+- nmap --host-timeout 1s 192.168.0.1 (good for across WAN or distance)
+- nmap --scan-delay 10ms 192.168.0.1 (helps with rate limiting and IDS)
+- nmap --min-rate 50 192.168.0.1 (min packets per second)
+- nmap --max-rate 50 192.168.0.1 (max packets per second)
+- nmap --defeat-rst-ratelimit 192.168.0.1 (accelerate scans) less accurate 0.1 max can help with stealth
+- 
 ## NMAP Scripting Engine (NSE)
+[Nmap Scripting Engine NSE](https://nmap.org/book/nse.html) 
+- nmap --script-help="all" (shows the scripts and categories) very long, use website below to search for what you need
+- nmap --script-help-"*http* (wildcard ability to search)
+[Scripts](https://nmap.org/nsedoc/scripts)
+- nmap --script script.name 192.168.0.1
+- 
+- nmap -sn --script whois-* 192.168.0.1 (whois on the target)
+- nmap --traceroute --script traceroute-geolocation domain.com (trace and geolocation on target)
 
 ## Output Options
+[Output](https://nmap.org/book/man-output.html#:~:text=In%20addition%20to%20offering%20different%20output)
+-oN text
+-oX XML
+-oG grepable
+-oA all formats
+-v verbose
+-d debugging level
+
+Nmap  --stats-every 2s 192.168.0.1 (shows updates every 2 seconds)
