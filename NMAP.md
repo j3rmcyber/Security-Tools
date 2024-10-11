@@ -84,7 +84,6 @@ Timing Templates:
 - nmap --script-help-"*http* (wildcard ability to search)
 - [Scripts](https://nmap.org/nsedoc/scripts)
 - nmap --script script.name 192.168.0.1
-
 - nmap -sn --script whois-* 192.168.0.1 (whois on the target)
 - nmap --traceroute --script traceroute-geolocation domain.com (trace and geolocation on target)
 
@@ -96,5 +95,4 @@ Timing Templates:
 -oA all formats
 -v verbose
 -d debugging level
-
 Nmap  --stats-every 2s 192.168.0.1 (shows updates every 2 seconds)
