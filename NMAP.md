@@ -89,10 +89,10 @@ Timing Templates:
 
 ## Output Options
 - [Output](https://nmap.org/book/man-output.html#:~:text=In%20addition%20to%20offering%20different%20output)
--oN text
--oX XML
--oG grepable
--oA all formats
--v verbose
--d debugging level
-Nmap  --stats-every 2s 192.168.0.1 (shows updates every 2 seconds)
+- -oN text
+- -oX XML
+- -oG grepable
+- -oA all formats
+- -v verbose
+- -d debugging level
+- Nmap  --stats-every 2s 192.168.0.1 (shows updates every 2 seconds)
