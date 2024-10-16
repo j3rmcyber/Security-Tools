@@ -61,7 +61,7 @@ this is for getting the filtering status on a target
 Timing Templates:
 - T4 (milliseconds)
 - T4s (seconds)
-- T4m (minutes
+- T4m (minutes)
 - T4h (hours)
 - 0 -5 (zero being slowest 5 being fastest)
 - nmap -T5 192.168.0.1
