@@ -48,7 +48,8 @@ this is for getting the filtering status on a target
 - nmap -sO 192.168.0.1 (ip protocol scan) shows protocols used by the target
 - nmap --send-eth 192.168.0.1 (send raw ethernet packets) sidesteps IP layer
 - nmap --secnd-ip 192.168.0.1 (send ip packets) integrates with IP stack
-
+- nmap-open 192.168.0.0/24 (scans network for open ports)
+  
 ## OS and Service Detection
 - Nmap –O 192.168.0.1 (OS fingerprinting)
 - Nmap –v –O 192.168.0.1 (verbose)
