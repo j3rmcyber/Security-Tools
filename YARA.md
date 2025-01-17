@@ -60,6 +60,7 @@ Interesting dll that is used for http connections winhttp.dll:
 ![image](https://github.com/user-attachments/assets/bfa88a63-4a90-4a3b-a025-697d1270e637)
 
 You can use the blacklisted imports to create rules:
+
 ![image](https://github.com/user-attachments/assets/b8c56e73-ffb0-4a80-86c4-0765854eaea3)
 Pe.imports("winhttp.dll", "WinHttpConnect")
 Pe.machine == pe.MACHINE_AMD64 used for checking machine type
