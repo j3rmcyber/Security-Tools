@@ -12,9 +12,7 @@
   
 ## Commands:  
 As we talked about above, you may need to adjust how you reference/call on Volatility.  
-
 **Pull profile info (start here):** 
-
 ### Volatility -f memdump.mem imageinfo  
 - Take memory image 'memdump.mem' and provide suggested profile info.  
 - If volatility suggests a profile to use, be sure to:   
