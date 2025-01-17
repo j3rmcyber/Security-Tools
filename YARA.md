@@ -52,14 +52,14 @@ Try to use 2-3 groups of conditions to avoid generating false positives and also
 
 **Imports**:
 You can use PEStudio to find the imports and exports and create rules from them:
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/eade689d-08e1-437b-9bfb-a06bf7bcca2d/bff12025-aa7c-4a1c-a115-e445e5b3a5a7/image.png)
+![image](https://github.com/user-attachments/assets/0a8c1db4-b69e-4eb1-ad8b-6f2fb388877f)
 Pe.exports("Botanist", "Chechako", Originator", "Repressions")
 
 Interesting dll that is used for http connections winhttp.dll:
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/eade689d-08e1-437b-9bfb-a06bf7bcca2d/4a53cc61-9255-4180-855b-01a22b6afaf6/image.png)
+![image](https://github.com/user-attachments/assets/bfa88a63-4a90-4a3b-a025-697d1270e637)
 
 You can use the blacklisted imports to create rules:
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/eade689d-08e1-437b-9bfb-a06bf7bcca2d/de29f3cc-670c-4c97-918d-575cee6cd6f7/image.png)
+![image](https://github.com/user-attachments/assets/b8c56e73-ffb0-4a80-86c4-0765854eaea3)
 Pe.imports("winhttp.dll", "WinHttpConnect")
 Pe.machine == pe.MACHINE_AMD64 used for checking machine type
 
@@ -74,9 +74,9 @@ Pe.timestamp == 1616850469 // Tue Dec 08 17:58:56 2020
 **CompanyName field**:
 Pe.version_info["CompanyName"] contains AmAZon.cOm
 Pe.language(0x0804) // China – Languages identified can be used by specifying the Microsoft language code https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/eade689d-08e1-437b-9bfb-a06bf7bcca2d/e069f6a0-d415-4991-a145-420ee9df6e3c/image.png)
+![image](https://github.com/user-attachments/assets/0dbd0fe7-b69e-46ac-af1c-ec854a240ec7)
 
 You can do sections within PEStudio:
 Pe.sections[2].name == "BSS"
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/eade689d-08e1-437b-9bfb-a06bf7bcca2d/da8f6979-7cac-4128-bf8a-dad1a4c0a1f8/image.png)
+![image](https://github.com/user-attachments/assets/2946cf92-162a-4b9d-921f-52b5e3b0ee64)
 Section 0 is CODE, Section 1 is DATA, section 2 is BSS 
