@@ -82,5 +82,6 @@
 
 - You can do sections within PEStudio:
 - Pe.sections[2].name == "BSS"
+- 
 ![image](https://github.com/user-attachments/assets/2946cf92-162a-4b9d-921f-52b5e3b0ee64)
 - Section 0 is CODE, Section 1 is DATA, section 2 is BSS 
