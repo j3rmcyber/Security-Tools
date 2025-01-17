@@ -56,6 +56,7 @@ You can use PEStudio to find the imports and exports and create rules from the
 Pe.exports("Botanist", "Chechako", Originator", "Repressions")
 
 Interesting dll that is used for http connections winhttp.dll:
+
 ![image](https://github.com/user-attachments/assets/bfa88a63-4a90-4a3b-a025-697d1270e637)
 
 You can use the blacklisted imports to create rules:
@@ -75,6 +76,7 @@ Pe.timestamp == 1616850469 // Tue Dec 08 17:58:56 2020
 Pe.version_info["CompanyName"] contains AmAZon.cOm
 Pe.language(0x0804) // China – Languages identified can be used by specifying the Microsoft language code 
 [link](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f)
+
 ![image](https://github.com/user-attachments/assets/0dbd0fe7-b69e-46ac-af1c-ec854a240ec7)
 
 You can do sections within PEStudio:
