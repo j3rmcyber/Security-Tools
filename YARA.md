@@ -1,4 +1,4 @@
-#In depth how to use Yara rules
+# In depth how to use Yara rules
 - Metadata: (does not affect the rule itself)
 - Author – Name, Email, X Handle
 - Date – Creation date
@@ -7,22 +7,22 @@
 - Description – brief overview of the rules purpose and malware aiming to detect
 - Hash – list of sample hashes that were used to create rule
 
-**Strings**: Defines search criteria
-The string from the malware needs to be declared a variable
-A$="string from malware sample"
+## Strings: Defines search criteria
+- The string from the malware needs to be declared a variable
+- A$="string from malware sample"
 
-**Modifiers**:
-A$="malwarestring" **fullword** match exact word
-A$="malwarestring" **wide** match unicode strings seperated bu null bytes ex: '.m.a.l.w.a.r.e.c.o.m.'
-A$="malwarestring" **wide ascii** rule matches on acsii and unicode characters
-A$="malwarestring" **nocase** rule matches string regardless of case
+## Modifiers:
+- $="malwarestring" **fullword** match exact word
+- A$="malwarestring" **wide** match unicode strings seperated bu null bytes ex: '.m.a.l.w.a.r.e.c.o.m.'
+- A$="malwarestring" **wide ascii** rule matches on acsii and unicode characters
+- A$="malwarestring" **nocase** rule matches string regardless of case
 
 ![image](https://github.com/user-attachments/assets/8d3e749f-ddad-4d0c-9ab1-7598c2ecac17)
-Using the hexadecimal from photo.png
-A$={5C 70 68 6F 74 6F 2E 70 6E 67}
-A$={5C 70 68 6F ?? ?F 2E 70 6E 67}  use ? For a wildcard for slight variation of a hex pattern
-A$={5C [2-10] 68 6F 74 6F 2E 70 6E 67}  may be 2-10 random bytes before a matching pattern begins
-$a={5C (01 02 | 03 04) 6F 2E 70 6E 67}  hex in location could be '01 02' or '03 04'
+- Using the hexadecimal from photo.png
+- A$={5C 70 68 6F 74 6F 2E 70 6E 67}
+- A$={5C 70 68 6F ?? ?F 2E 70 6E 67}  use ? For a wildcard for slight variation of a hex pattern
+- A$={5C [2-10] 68 6F 74 6F 2E 70 6E 67}  may be 2-10 random bytes before a matching pattern begins
+- $a={5C (01 02 | 03 04) 6F 2E 70 6E 67}  hex in location could be '01 02' or '03 04'
 
 Some great strings for Yara rules:
 **Mutexes** – Unique to malware families, used to check if a device has already been compromised by checking for the presence of a mutex
