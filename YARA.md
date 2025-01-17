@@ -73,7 +73,8 @@ Pe.timestamp == 1616850469 // Tue Dec 08 17:58:56 2020
 
 **CompanyName field**:
 Pe.version_info["CompanyName"] contains AmAZon.cOm
-Pe.language(0x0804) // China – Languages identified can be used by specifying the Microsoft language code https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f
+Pe.language(0x0804) // China – Languages identified can be used by specifying the Microsoft language code 
+[link](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f)
 ![image](https://github.com/user-attachments/assets/0dbd0fe7-b69e-46ac-af1c-ec854a240ec7)
 
 You can do sections within PEStudio:
